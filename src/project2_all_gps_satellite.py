@@ -33,10 +33,6 @@ At any given moment, a receiver in Auckland can see between 6 and 12 GPS satelli
 # Step5: Plot 2: Full GPS SNR Heatmap (Satellite Availability)
 # Step6: Satellite Availability Statistics
 =============================================================================
-"""
-
-pip install --upgrade georinex
-
 # ──────────────────────────────────────────────────────────
 # Step 1 — Install & Import Libraries
 # ──────────────────────────────────────────────────────────
