@@ -1,10 +1,10 @@
-# 🛰️ Project 2 — All GPS Satellites Analysis
+# Project 2 — All GPS Satellites Analysis
 
 > **Full Fleet Pseudorange Arcs & SNR Heatmap | 24-Hour Tracking | Auckland, NZ**
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project expands on Project 1 by analysing the **entire GPS satellite fleet** tracked over 24 hours from the **AUCK00NZL** geodetic reference station in Auckland, New Zealand.
 
@@ -12,13 +12,13 @@ Instead of one satellite, we now look at all visible GPS satellites simultaneous
 
 | Plot | What It Shows |
 |------|--------------|
-| 📡 All GPS Pseudorange Arcs | Every satellite's range evolution overlaid — each curve is one satellite |
-| 🌡️ GPS SNR Heatmap | Signal quality matrix: rows = satellites, time flows left to right |
-| 📊 Availability Timeline | How many GPS satellites were tracked per epoch |
+| All GPS Pseudorange Arcs | Every satellite's range evolution overlaid — each curve is one satellite |
+| GPS SNR Heatmap | Signal quality matrix: rows = satellites, time flows left to right |
+| Availability Timeline | How many GPS satellites were tracked per epoch |
 
 ---
 
-## 🖼️ Output Plots
+## Output Plots
 
 ### Plot 1 — All GPS Pseudorange Arcs
 
@@ -47,7 +47,7 @@ Line chart showing how many GPS satellites are tracked per epoch, with reference
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 ```
 project2-all-gps-satellites/
@@ -64,7 +64,7 @@ project2-all-gps-satellites/
 
 ---
 
-## ⚙️ How to Run
+## How to Run
 
 ### 1. Install dependencies
 
@@ -90,7 +90,7 @@ The notebook automatically detects all GPS satellites in your file — no manual
 
 ---
 
-## 🛠️ Dependencies
+## Dependencies
 
 | Package | Purpose |
 |---------|---------|
@@ -102,7 +102,7 @@ The notebook automatically detects all GPS satellites in your file — no manual
 
 ---
 
-## 📡 RINEX File Format
+## RINEX File Format
 
 Developed using:
 
@@ -118,7 +118,7 @@ Compatible with **any RINEX 3 observation file** from any station.
 
 ---
 
-## 🧭 Observables Used
+## Observables Used
 
 | Code | Description |
 |------|-------------|
@@ -129,7 +129,7 @@ Compatible with **any RINEX 3 observation file** from any station.
 
 ---
 
-## 💡 Key Concepts
+## Key Concepts
 
 **Why do pseudorange arcs have different shapes?**
 
@@ -141,7 +141,7 @@ GNSS positioning solves for 4 unknowns simultaneously: X, Y, Z coordinates + rec
 
 ---
 
-## 👤 Author
+## Author
 
 **Hakim El Azzouzi**  
 MSc Global Navigation Satellite Systems  
@@ -152,13 +152,13 @@ Mohammed First University, Oujda, Morocco
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🔗 Part of the GNSS RINEX Analysis Series
+##  Part of the GNSS RINEX Analysis Series
 
 | # | Project |
 |---|---------|
