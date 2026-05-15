@@ -1,12 +1,6 @@
 =============================================================================
 🛰️ Project 2 — All GPS Satellites Analysis
 =============================================================================
- Author   : Hakim El Azzouzi
- Degree   : MSc Global Navigation Satellite Systems
-            Mohammed First University, Oujda, Morocco
- Email    : elazzouzihakim10@gmail.com
- LinkedIn : https://linkedin.com/in/Hakim-El-Azzouzi
- Location : Luxembourg 🇱🇺
 -----------------------------------------------------------------------------
  Station  : AUCK00NZL  —  Auckland, New Zealand  (GeoNet / LINZ Network)
  File     : AUCK00NZL_R_20260010000_01D_30S_MO.rnx
@@ -66,7 +60,7 @@ print(f'   xarray version   : {xr.__version__}')
 # RINEX FILE PATH HERE
 obs_path = "/AUCK00NZL_R_20260010000_01D_30S_MO.rnx"  # ← change this path
 # Read the file header first (fast — no data loaded yet)
-print("📋 FILE HEADER")
+print("FILE HEADER")
 print("=" * 60)
 header = gr.rinexheader(obs_path)
 
@@ -77,7 +71,7 @@ print()
 
 # Load all observation data (interval=30 means keep 30-sec rate)
 
-print("⏳ Loading observation data (this may take 1–2 minutes)...")
+print("Loading observation data (this may take 1–2 minutes)...")
 obs = gr.load(obs_path, interval=30)
 print()
 print("✅ Data loaded!")
@@ -122,7 +116,7 @@ print()
 # Quick data availability summary
 
 total_epochs = obs.dims['time']
-print(f"📊 Total epochs in file: {total_epochs}  (= {total_epochs * 30 / 3600:.0f} hours at 30-sec rate)")
+print(f"Total epochs in file: {total_epochs}  (= {total_epochs * 30 / 3600:.0f} hours at 30-sec rate)")
 print()
 print(f"{'Satellite':<12} {'Valid Epochs':>14} {'Coverage %':>12} {'Mean SNR':>12}")
 print("-" * 52)
@@ -216,7 +210,7 @@ plt.show()
 print(f'✅ Plot saved: plot1_all_gps_pseudorange.png')
 print(f'   Satellites plotted: {len(plotted)}')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print('   • Each arc = one satellite rising, reaching peak elevation, then setting.')
 print('   • Minimum of each arc = satellite at highest elevation (closest to receiver).')
 print('   • Gaps in a curve = signal interruption (obstacle, low elevation, multipath).')
@@ -316,7 +310,7 @@ plt.show()
 
 print('✅ Plot saved: plot2_gps_snr_heatmap.png')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print('   • Each ROW = one GPS satellite\'s tracking arc through the day')
 print('   • Dark (black/blue) = satellite below horizon or very weak signal')
 print('   • Green = good tracking conditions (SNR > 35 dB-Hz)')
@@ -375,7 +369,7 @@ plt.show()
 # ─────────────────────────────────────────────
 # Statistics
 # ─────────────────────────────────────────────
-print(f'📊 GPS Satellite Availability Statistics:')
+print(f'GPS Satellite Availability Statistics:')
 print(f'   Total GPS satellites in file  : {len(gps_sats)}')
 print(f'   Mean sats tracked per epoch   : {gps_count.mean():.1f}')
 print(f'   Max sats tracked (best epoch) : {gps_count.max()}')
