@@ -40,8 +40,8 @@ def plot_all_pseudorange(obs, pr_code, gps_sats):
             ax.plot(pr.index, pr.values / 1e6, lw=1.4, alpha=0.85, color=sat_colors[sat], label=sat)
             plotted.append(sat)
 
-        ~#except Exception as e:
-           # print(f"   Skipped {sat}: {e}")
+        except Exception as e:
+            print(f"   Skipped {sat}: {e}")
 
     # Axes formatting
 
@@ -61,7 +61,7 @@ def plot_all_pseudorange(obs, pr_code, gps_sats):
       
     # Legend (compact, 4 columns)
     legend = ax.legend(ncol=4, fontsize=8,loc='upper right',framealpha=0.3,facecolor="#1a1a2e",edgecolor="#444444")
-      for text in legend.get_texts():
+    for text in legend.get_texts():
           text.set_color("white")
       
     plt.tight_layout()
