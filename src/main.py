@@ -29,7 +29,7 @@ gps_sats = get_gps_satellites(obs)
 pr_code, snr_code = select_observables(obs)
 
 # Availability stats
-availability, total_epochs = compute_satellite_availability(obs, pr_code, gps_sats)
+availability, total_epochs = compute_satellite_availability(obs, pr_code, snr_code, gps_sats)
 
 for sat, val in availability.items():
     if val:
