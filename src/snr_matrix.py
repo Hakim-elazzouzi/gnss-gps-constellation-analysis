@@ -11,10 +11,10 @@ def build_snr_matrix(obs, snr_code, gps_sats):
     snr_gps = obs[snr_code].sel(sv=gps_sats)  # Select GPS satellites and load their SNR
     snr_df = snr_gps.to_pandas()       # Convert to pandas DataFrame: rows = time, columns = satellites
 
-    sn_matrix = snr_df[gps_sats].T.values  # Transpose: rows = satellites, columns = time (for heatmap)
+    snr_matrix = snr_df[gps_sats].T.values  # Transpose: rows = satellites, columns = time (for heatmap)
 
     # Replace NaN (satellite not visible) with a sentinel value
     # We use 10 dB-Hz so it shows as dark on the colormap
-    snr_matrix_display = np.where(np.isnan(matrix), 10, matrix) 
+    snr_matrix_display = np.where(np.isnan(snr_matrix), 10, snr_matrix) 
 
-    return matrix_display, snr_df
+    return snr_matrix_display, snr_df
