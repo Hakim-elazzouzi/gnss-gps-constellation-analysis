@@ -45,7 +45,7 @@ snr_matrix, snr_df = build_snr_matrix(obs, snr_code, gps_sats)
 plot_snr_heatmap(snr_df, snr_matrix, gps_sats)
 
 # Availability curve
-gps_count = compute_gps_availability(obs, pr_code, gps_sats)
+gps_count = compute_gps_availability(obs, pr_code, snr_code, gps_sats)
 
 plot_availability(gps_count, len(gps_sats))
 
