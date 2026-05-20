@@ -56,7 +56,14 @@ project2-all-gps-satellites/
 │   ├── plot2_gps_snr_heatmap.png
 │   └── plot3_gps_availability.png
 ├── src/
-│   ├── project2_all_gps_satellites.py      ← Main python (run this)
+├── config.py
+├── rinex_loader.py
+├── satellite_analysis.py
+├── visualization.py
+├── availability.py        
+├── snr_matrix.py
+├── reporting.py        
+└── main.py
 ├── requirements.txt                        ← Python dependencies
 ├── LICENSE                                 ← MIT License
 └── README.md                               ← This file
@@ -83,10 +90,10 @@ obs_path = "/path/to/your/file.rnx"   # ← update this
 ### 3. Run all cells
 
 ```bash
-jupyter notebook project2_all_gps_satellites.ipynb
-```
+From the project root directory:
 
-The notebook automatically detects all GPS satellites in your file — no manual configuration needed.
+python src/main.py, and the plots will be saved in the output folder
+```
 
 ---
 
